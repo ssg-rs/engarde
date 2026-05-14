@@ -115,7 +115,7 @@ debug = "line-tables-only"  # requires Cargo 1.71
 
 [package]
 name = "engarde"
-version = "0.1.15"
+version = "0.1.16"
 description = "Fenced code formatting"
 readme = "README.md"
 categories = ["parser-implementations", "parsing", "text-processing"]
