@@ -1,23 +1,13 @@
+//! Markdown Fenced Code Block Highlighting
+
 #![cfg_attr(docsrs, feature(doc_cfg))]
 #![warn(clippy::print_stderr)]
 #![warn(clippy::print_stdout)]
 
-pub use crate::cobalt::build;
-pub use crate::cobalt::classify_path;
-pub use crate::cobalt_model::Config;
-pub use crate::error::Error;
+#[cfg(feature = "syntax")]
+mod syntax;
+#[cfg(feature = "syntax")]
+pub use syntax::*;
 
-pub mod cobalt_model;
-pub mod error;
-
-mod cobalt;
-mod document;
-
-mod pagination;
-mod syntax_highlight;
-
-pub use crate::syntax_highlight::SyntaxHighlight;
-
-#[doc = include_str!("../README.md")]
-#[cfg(doctest)]
-pub struct ReadmeDoctests;
+pub use raw::*;
+mod raw;
