@@ -94,7 +94,7 @@ mod test {
     fn codeblock_renders_rust() {
         let syntax = Raw::new();
         let output = syntax.format(CODEBLOCK, Some("rust"), Some(""));
-        assert_eq!(output, CODEBLOCK_RENDERED.to_string());
+        assert_eq!(output, CODEBLOCK_RENDERED.to_owned());
     }
 
     const CODEBLOCK2: &str = r#"// comment with utf-8 你好 😎 <hello>"#;

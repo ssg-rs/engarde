@@ -44,7 +44,7 @@ impl Syntax {
 
     pub fn themes(&self) -> impl Iterator<Item = String> + '_ {
         let mut themes: Vec<_> = self.theme_set.themes.keys().cloned().collect();
-        themes.push(CSS_THEME.to_string());
+        themes.push(CSS_THEME.to_owned());
         themes.sort_by_key(|a| a.to_ascii_lowercase());
 
         themes.into_iter()
@@ -186,7 +186,7 @@ mod test {
     fn highlight_block_renders_rust() {
         let syntax = Syntax::new();
         let output = syntax.format(CODEBLOCK, Some("rust"), Some("base16-ocean.dark"));
-        assert_eq!(output, CODEBLOCK_RENDERED.to_string());
+        assert_eq!(output, CODEBLOCK_RENDERED.to_owned());
     }
 
     const CUSTOM_CODEBLOCK: &str = "[[[]]]]";
