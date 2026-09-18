@@ -2,7 +2,7 @@
 
 > Fenced Code Formatting
 
-[![Documentation](https://img.shields.io/badge/docs-master-blue.svg)][Documentation]
+[![Documentation](https://img.shields.io/badge/docs-main-blue.svg)][Documentation]
 ![License](https://img.shields.io/crates/l/engarde.svg)
 [![Crates Status](https://img.shields.io/crates/v/engarde.svg)](https://crates.io/crates/engarde)
 
